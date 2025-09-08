@@ -23,11 +23,65 @@ Se till att när man klickar på submit-knappen i formuläret så ska tack.html 
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>jag har mentalt gett upp</title>
 </head>
 
 <body>
 
-</body>
+
+<legend>Form</legend>
+<form action="tack.html" method="get">
+
+    <fieldset>
+        <legend>Personlig information</legend>
+
+        <label for="fname">Förnamn:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+
+        <label for="lname">Efternamn:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+
+
+        <input type="radio" id="kön" name="kön" value="kille">
+        <label for="kille">kille</label>
+        <input type="radio" id="kön" name="kön" value="tjej">
+        <label for="tjej">tjej</label><br><br>
+
+        <label for="ålder">Ålder:</label>
+        <input type="number" id="ålder" name="ålder" min="1" max="100" > <br><br>
+
+        <label for="telefon">Telefon nummer:</label>
+        <input type="text" value="+46" readonly style="width:40px;">
+        <input type="tel" id="telefon nummer" name="telefon nummer" pattern="[0-9]{7,12}" required placeholder="701234567"><br><br>
+
+        <input type="checkbox" id="check" name="check" value="check">
+        <label for="check">Jag godkänner villkoren</label><br><br>
+
+        <label for="datetime-local-input">Datum:</label>
+    <input type="datetime-local" id="datetime-local-input" name="datetime-local-input"><br><br>
+
+    </fieldset>
+
+     <fieldset>
+
+      <legend>Skapa karaktär</legend>    
+
+      <label for="color-input">färg:</label>
+    <input type="color" id="color-input" name="color-input"><br><br>
+
+    <label for="range-input">Längd:</label>
+    <input type="range" id="range-input" name="range-input" min="1" max="200" oninput="document.getElementById('range-value').textContent = this.value;">
+    <span id="range-value">100</span> cm<br><br>
+    
+
+    <label for="fname">karaktär Namn:</label>
+     <input type="text" id="fname" name="fname"><br><br>
+
+    </fieldset>
+ <fieldset>
+     
+ <input a href="tack.html" type="submit" value="Submit">
+</form>
+ </body>
 
 </html>
